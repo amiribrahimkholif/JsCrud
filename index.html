@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud</title>
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+
+<body>
+    <div class="container my-5">
+        <div class="mb-3">
+            <label for="name">Product Name:</label>
+            <br>
+            <input id="nameInput" type="text" name="name" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="price">Product Price:</label>
+            <br>
+            <input id="priceInput" type="number" name="price" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="category">Product Category:</label>
+            <br>
+            <select name="category" id="catInput" class="form-control">
+                <option value="">Select a category...</option>
+                <option value="mobile">Mobile</option>
+                <option value="tv">TV</option>
+                <option value="laptop">LapTop</option>
+                <option value="electric">Electric</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="desc">Product Description:</label>
+            <br>
+            <input id="descInput" type="text" name="desc" class="form-control">
+        </div>
+        <button id="mainBtn" onclick="SelectAddOrUpdate()" class="btn btn-info">Add Product</button>
+    </div>
+
+    <input onkeyup="SearchProduct(this.value)" placeholder="Search Product..." class="form-control w-75 m-auto"
+        type="text">
+
+    <table class="table text-center w-75 m-auto py-3 mt-4">
+        <thead>
+            <th>Index</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </thead>
+
+        <tbody id="tableBody">
+
+        </tbody>
+    </table>
+
+
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
